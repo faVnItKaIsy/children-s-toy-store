@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style_catalog.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница каталога</title>
+</head>
+<body id="bodyTop">
+    <header>
+        <a id="animationLogo" href="../index.html">
+            <img id="logo" src="../img/logo.png" alt="Логотип">
+        </a>
+        
+        <div class="search_box">
+           <input id="inputLook" type="search" placeholder="Поиск"> 
+            <button id="look"> 
+                <svg width="28" height="28" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.591 9.591a4 4 0 10-5.657-5.657 4 4 0 005.657 5.657zm1.06-6.717a5.502 5.502 0 01.915 6.57l2.732 2.733a1.5 1.5 0 11-2.121 2.12l-2.732-2.73a5.5 5.5 0 111.207-8.692z" fill="#fff"></path>
+                </svg>
+            </button> 
+        </div>
+        
+        <div id="circle">
+            <div class="favourites">
+                <img class="butFavouritesAndBasket" src="../img/избранное.png" alt="">
+            </div>
+            <div class="basket">
+                <img class="butFavouritesAndBasket" src="../img/корзина.png" alt="">
+            </div>
+        </div>
+
+        <div class="menu">
+            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+            <label for="burger-checkbox" class="burger"></label>
+            <ul class="menu-list">
+                <li class="item"><a href="#" class="menu-item">О доставке</a><li>
+                <li class="item"><a href="../личный_кабинет/profile.html">Личный кабинет</a></li> 
+                <li class="item"><a href="../авторизация/login.html">Войти</a></li>
+                <li class="item"><a href="../каталог/catalog.html" class="menu-item">Каталог</a><li>
+            </ul>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="menuCatalog">
+            <li>
+                <div class="navMenu">
+                    <a class="catalog" href="../каталог/catalog.html">Каталог</a>
+                    <div class="navMenu-content">
+                      <a href="#">Творчество</a>
+                      <a href="#">Настольные игры</a>
+                      <a href="#">Мягкие игрушки</a>
+                      <a href="#">Игрушки для  малышей до 3 лет</a>
+                      <a href="#">Развивающие игрушки</a>
+                      <a href="#">Куклы и аксессуары</a>
+                      <a href="#">Научные  эксперементы</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">О доставке</a></li>
+            <li><a href="../личный_кабинет/profile.html">Личный кабинет</a></li> 
+            <li><a href="../авторизация/login.html">Войти</a></li>
+        </ul>
+
+    </nav>
+    <main>
+        <a href="#bodyTop">
+            <div class="btn-up btn-up_hide"></div>
+        </a>
+        
+        <h2>Каталог</h2>
+        
+        <div class="sort">
+            <span id="spanSort">Сортировать:</span>
+            <button onclick="sortAscending()" id="sortAscending">По возрастающей цене</button>
+            <button onclick="sortDexcending()" id="sortDexcending" type="button">По убывающей цене</button>  
+        </div>
+
+        <!--<div class="bodyd">
+            <div class="list" data-prices="201">201</div>
+            <div class="list" data-prices="217">217</div>
+            <div class="list" data-prices="275">275</div>
+            <div class="list" data-prices="203">203</div>
+            <div class="list" data-prices="208">208</div>
+        </div>
+        <br />-->
+
+
+        <div class="mainCatalog">
+            <div class="mainMenu">
+                <ul>
+                    <a href="#">Творчество</a>
+                    <li><a href="#">Творчество</a></li>
+                    <li><a href="#">Творчество</a></li>
+                </ul>
+                <ul>
+                    <a href="#">Настольные игры</a>
+                    <li><a href="#">Творчество</a></li>
+                    <li><a href="#">Творчество</a></li>
+                </ul>
+                <ul>
+                    <a href="#">Мягкие игрушки</a>
+                    <li><a href="#">Творчество</a></li>
+                    <li><a href="#">Творчество</a></li>
+                </ul>
+                <ul>
+                    <a href="#">Игрушки для  малышей до 3 лет</a>
+                    <li><a href="#">Творчество</a></li>
+                    <li><a href="#">Творчество</a></li>
+                </ul>
+                <ul>
+                    <a href="#">Развивающие игрушки</a>
+                    <li><a href="#">Творчество</a></li>
+                    <li><a href="#">Творчество</a></li>
+                </ul>
+                <ul>
+                    <a href="#">Куклы и аксессуары</a>
+                    <li><a href="#">Творчество</a></li>
+                    <li><a href="#">Творчество</a></li>
+                </ul>
+                <ul>
+                    <a href="#">Научные  эксперементы</a>
+                    <li><a href="#">Творчество</a></li>
+                    <li><a href="#">Творчество</a></li>
+                </ul>
+            </div>
+            <div class="containerCardOrder">
+                <div class="cardOrderAll">
+                    <div class="cardOrder" data-order="1" data-price="1170">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1170 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2200">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2200 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="1100">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1100 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="1800">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1800 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2300">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2300 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="1900">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1900 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2400">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2400 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2900">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2900 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="1300">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1300 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+
+                    <div class="cardOrder" data-order="1" data-price="1500">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1500 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="1800">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1800 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2000">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2000 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2100">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2100 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2000">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2000 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="1000">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1000 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="1100">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1100 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2200">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2200 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2170">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2170 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="1270">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">1270 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    <div class="cardOrder" data-order="1" data-price="2000">
+                        <div class="buttonShortReview">
+                            <a href="">
+                                <img src="../img/кукла_карточка.png" alt="">
+                            </a>
+                            <button class="shortReview" onclick="">Краткий обзор</button>
+                        </div>
+                        <span class="nameOrder">Кукла Барби. Игр. наб. Defa Lucy "Юный водитель"</span>
+                        <span class="price">2000 руб.</span>
+                        <button class="addToBasket" onclick="addToBasketButton()" type="button" data-button="0">В корзину</button>
+                        <button class="added" onclick="addedButton()" data-button="1">Добавлено</button>
+                    </div>
+                    
+
+                    
+                </div>
+                <div class="pagination">
+                    <button id="buttonPagination">Показать ещё</button>
+                </div>
+            </div>
+            
+        
+        </div>
+
+            
+
+
+
+
+       
+
+
+
+
+    </main>
+    
+    <footer>
+        <div class="footerContainer">
+            <div class="footerD">
+                <a href="../каталог/catalog.html">Каталог</a>
+                <a href="">О доставке</a>
+                <a href="../личный_кабинет/profile.html">Личный кабинет</a> 
+                <a href="../авторизация/login.html">Войти</a>
+                <a href="../index.html">
+                    <img id="footerLogo" src="../img/logo.png" alt="Логотип">
+                </a>
+            </div>
+
+            <div class="footerD" id="footerSocial">
+                Контакты
+                <span>
+                    E-mail: 79232129444@yandex.ru<br>
+                    Телефон: +7–923–212–94–44
+                </span>
+                <div class="socialNetwork">
+                   <img class="social" src="../img/почта.png" alt="">
+                    <img class="social" src="../img/вк.png" alt="">
+                    <img class="social" src="../img/однокласники.png" alt=""> 
+                </div>
+                    
+            </div>
+
+            <div class="footerD" id="map">
+                Где найти
+                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/gospodin_rebenok/8724833193/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Господин ребенок</a><a href="https://yandex.ru/maps/1095/abakan/category/toys_and_games/184107250/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Детские игрушки и игры в Абакане</a><a href="https://yandex.ru/maps/1095/abakan/category/board_games/184107267/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Настольные и интеллектуальные игры в Абакане</a><iframe src="https://yandex.ru/map-widget/v1/org/gospodin_rebenok/8724833193/?ll=91.439914%2C53.732815&z=15" width="560" height="400" frameborder="1" style="position:relative;"></iframe></div>
+            </div>
+        </div> 
+        <div>©2024 “Господин ребенок” Мультибрендовый магазин игрушек.</div>
+
+    </footer>
+
+   <!-- <div class="close">+</div>-->
+    
+   <script src="script_catalog.js"></script>
+</body>
+</html>
