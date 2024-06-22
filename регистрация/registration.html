@@ -90,47 +90,47 @@
                 <form action="">
                     <div>
                         <label for="firstnameName">Имя*</label>
-                        <input id="firstname" type="firstname" name="firstnameName" required placeholder="">
+                        <input id="firstname" type="firstname" pattern="([А-Яа-яЁё]{2,})" name="firstnameName" required placeholder="">
                     
                         <!--<span id="pSurname1">Введите фамилию</span>
                         <span id="pSurname2">Неправильный формат фамилии</span>-->
                     </div>
                     <div>
                         <label for="lastnameName">Фамилия*</label>
-                        <input id="lastname" type="text" name="lastnameName" required placeholder="">
+                        <input id="lastname" type="text" pattern="([А-Яа-яЁё]{2,})" name="lastnameName" required placeholder="">
                     </div>
                     <div>
                         <label for="emailName">Почта*</label>
-                        <input id="email" type="email" name="emailName" required placeholder="">
+                        <input id="email" type="email" pattern="[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}" name="emailName" required placeholder="">
                     </div>
                     <div>
                         <label for="tel">Телефон*</label>
-                        <input id="phone" type="tel" name="tel" required placeholder="">
+                        <input id="phone" type="tel" pattern="[0-9]{11}" name="tel" required placeholder="">
                     </div>
                     <div>
                         <label for="companyName">Компания*</label>
-                        <input id="company" type="text" name="companyName" required placeholder="">
+                        <input id="company" type="text" pattern="([А-Яа-яЁё]{2,})" name="companyName" required placeholder="">
                     </div>
                     <div>
                         <label for="idCompanyName">ID компании*</label>
-                        <input id="idCompany" type="text" name="idCompanyName" required placeholder="">
+                        <input id="idCompany" type="text" pattern="([0-9{2,})" name="idCompanyName" required placeholder="">
                     </div>
                     <div>
                         <label for="INNName">ИНН*</label>
-                        <input id="INN" type="number" name="INNName" required placeholder="">
+                        <input id="INN" type="number" pattern="([0-9{,16})" name="INNName" required placeholder="">
                     </div>
                     <div>
                         <label for="addressName">Адрес*</label>
-                        <input id="address" type="text" name="addressName" required placeholder="">
+                        <input id="address" type="text" pattern="([А-Яа-яЁё]{2,})" name="addressName" required placeholder="">
                     </div>
                     <div>
                         <label for="citiName">Город*</label>
-                        <input id="citi" type="text" name="citiName" required placeholder="">
+                        <input id="citi" type="text" pattern="([А-Яа-яЁё]{2,})" name="citiName" required placeholder="">
                     </div>
                     <div>
                         <label for="countryName">Страна*</label>
                         <!--<input type="text" name="country" required placeholder="">-->
-                        <select name="countryName" class="spisok">
+                        <select name="countryName" required class="spisok">
                             <option selected></option>
                             <option value="0">Россия</option>
                             <option value="1">Китай</option>
@@ -139,7 +139,7 @@
                     <div>
                         <label for="region_area_Name">Регион/Область*</label>
                         <!--<input type="text" name="company" required placeholder="">-->
-                        <select name="region_area_Name" class="spisok">
+                        <select name="region_area_Name" required class="spisok">
                             <option selected></option>
                             <option value="0">Республика Хакасия</option>
                             <option value="1"></option>
@@ -147,11 +147,11 @@
                     </div>
                     <div>
                         <label for="password">Пароль*</label>
-                        <input id="pass" type="password" name="password" required placeholder="">
+                        <input id="pass" minlength="8" maxlength="32" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}" type="password" name="password" required placeholder="">
                     </div>
                     <div>
                         <label for="repeatePassword">Повтор пароля*</label>
-                        <input id="passR" type="password" name="repeatePassword" required placeholder="">
+                        <input id="passR"  type="password" name="repeatePassword" required placeholder="">
                     </div>
 
                     <a class="j" href="../личный_кабинет/profile.html">
