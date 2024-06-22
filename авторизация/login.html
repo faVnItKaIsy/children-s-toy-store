@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="style_login.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница авторизации</title>
+    <title>Главная страница</title>
 </head>
 <body id="bodyTop">
     <header>
-        <a id="animationLogo" href="../index.html">
-            <img id="logo" src="../img/logo.png" alt="Логотип">
+        <a id="animationLogo" href="./index.html"><!--Логотип с анимацией-->
+            <img id="logo" src="./img/logo.png" alt="Логотип">
         </a>
         
-        <div class="search_box">
+        <div class="search_box"><!--Поле поиска-->
            <input id="inputLook" type="search" placeholder="Поиск"> 
             <button id="look"> 
                 <svg width="28" height="28" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.591 9.591a4 4 0 10-5.657-5.657 4 4 0 005.657 5.657zm1.06-6.717a5.502 5.502 0 01.915 6.57l2.732 2.733a1.5 1.5 0 11-2.121 2.12l-2.732-2.73a5.5 5.5 0 111.207-8.692z" fill="#fff"></path>
-                </svg>
+                </svg><!--Лупа-->
             </button> 
         </div>
         
         <div id="circle">
-            <div class="favourites">
-                <img class="butFavouritesAndBasket" src="../img/избранное.png" alt="">
+            <div class="favourites"><!--Кнопка перехода в избранное-->
+                <img class="butFavouritesAndBasket" src="./img/избранное.png" alt="">
             </div>
-            <div class="basket">
-                <img class="butFavouritesAndBasket" src="../img/корзина.png" alt="">
+            <div class="basket"><!--Кнопка перехода в корзину-->
+                <img class="butFavouritesAndBasket" src="./img/корзина.png" alt="">
             </div>
         </div>
 
+        <!--Бургер-меню-->
         <div class="menu">
             <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
             <label for="burger-checkbox" class="burger"></label>
             <ul class="menu-list">
                 <li class="item"><a href="#" class="menu-item">О доставке</a><li>
-                <li class="item"><a href="../личный_кабинет/profile.html">Личный кабинет</a></li> 
-                <li class="item"><a href="../авторизация/login.html">Войти</a></li>
-                <li class="item"><a href="../каталог/catalog.html" class="menu-item">Каталог</a><li>
+                <li><a href="./личный_кабинет/profile.html">Личный кабинет</a>/li> 
+                <li><a href="./авторизация/login.html">Войти</a></li> 
+                <li class="item"><a href="./каталог/catalog.html" class="menu-item">Каталог</a><li>
             </ul>
         </div>
 
     </header>
     <nav>
+        <!--Панель навигации-->
         <ul class="menuCatalog">
             <li>
+                
                 <div class="navMenu">
-                    <a class="catalog" href="../каталог/catalog.html">Каталог</a>
-                    <div class="navMenu-content">
+                    <a class="catalog" href="./каталог/catalog.html">Каталог</a>
+                    <div class="navMenu-content"><!--Выпадающее меню-->
                       <a href="#">Творчество</a>
                       <a href="#">Настольные игры</a>
                       <a href="#">Мягкие игрушки</a>
@@ -60,54 +63,101 @@
                 </div>
             </li>
             <li><a href="#">О доставке</a></li>
-            <li><a href="../личный_кабинет/profile.html">Личный кабинет</a></li> 
-            <li><a href="../авторизация/login.html">Войти</a></li>
+            <li><a href="./личный_кабинет/profile.html">Личный кабинет</a></li> 
+            <li><a href="./авторизация/login.html">Войти</a></li>
         </ul>
 
     </nav>
     <main>
+        <!--Кнопка листания вверх-->
         <a href="#bodyTop">
             <div class="btn-up btn-up_hide"></div>
         </a>
         
-        <div class="containerFormaLogin">
-            <div class="loginForma">
-                <h2>Авторизация</h2>
-               <!-- <div class="form" onsubmit="return validateForm()" autocomplete="v"  method="post">
-                  <form class="forma">-->
-                    <form class="forma" method="post" action="" onsubmit="return checkForm(this)">
-
-                    <input id="email" type="email" required name="email" placeholder="*E-mail">
-                    <span id="ddd"></span>
-                    <span id="spanEmail1">Введите E-mail</span>
-                    <span id="spanEmail2">Неверный формат E-mail.</span>
-                    <input id="pass" type="password" required name="password" placeholder="*Пароль">
-                    <span id="spanPassword1">Введите пароль</span>
-                    <span id="spanPassword2">Неверный формат пароля. В пароле должно быть минимум 8 символов, должны быть заглавные и прописные буквы, числа</span>
-
-                    <!--<a href="../личный_кабинет/profile.html"> class="sub" onclick="Submit()"-->
-                        <button class="sub" type="submit">Авторизоваться</button>
-                    <!--</a>
-                </div>--></form>  
-                
-                    
-                <span class="spanStar">Поля, отмеченные *, обязательны для заполнения</span>
-                <a class="aButtonLogin" href="../регистрация/registration.html">Зарегистрироваться</a>
+        <!--Слайдер-->
+        <div class="sl">
+            <div class="slider">
+                <div class="slider-container">
+                    <div class="slider">
+                        <img class="sliderImg" src="./img/слайдер2.png" alt="Слайд 1">
+                        <img class="sliderImg" src="./img/слайд_1.png" alt="Слайд 2">
+                        <img class="sliderImg" src="./img/слайдер2.png" alt="Слайд 3">
+                        <img class="sliderImg" src="./img/слайд_1.png" alt="Слайд 4"> 
+                    </div>
+                    <a id="buttonMoreDetailed" href="#">Подробнее</a>
+                    <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                    <button class="next-button" aria-label="Посмотреть следующий слайд">&gt;</button>
+                </div>
             </div>
         </div>
 
+        <a href="" id="stock">Акции</a>
+        <div class="stocks">
+            
+            <div class="adversitings">
+                <a id="ad_1" href="">
+                    <img id="ad_Img1" src="./img/кукла_барби.png" alt="">               
+                </a>
+                <a id="ad_2" href="">
+                    <img id="ad_Img2" src="./img/мягкие_игрушки.png" alt="">               
+                </a>
+                <a id="ad_3" href="">
+                    <img id="ad_Img3" src="./img/лкго.png" alt="">               
+                </a>
+                <a id="ad_4" href="">
+                    <img id="ad_Img4" src="./img/машинки.png" alt="">               
+                </a>
+                <a id="ad_5" href="">
+                    <img id="ad_Img5" src="./img/кукла.png" alt="">               
+                </a>
+            </div>
+        </div>
+
+        <a href="" id="aCategories">Популярные категории -></a>
+        
+        <div class="popularCategories">
+           <!--<div class="popularCategoriesGrupp1">--> 
+                <a href="">
+                    <span>Куклы</span>
+                    <img id="categories_Img1" src="./img/категория_куклы.png" alt="">
+                </a>
+                <a href="">
+                    <span>Научные эксперименты</span>
+                    <img id="categories_Img2" src="./img/категория_научные_эксперименты.png" alt="">
+                </a>
+           <!-- </div>
+            <div class="popularCategoriesGrupp2">-->
+                <a href="">
+                    <span>Конструкторы</span>
+                    <img id="categories_Img3" src="./img/категория_конструкторы.png" alt="">
+                </a>
+                <a href="">
+                    <span>Мягкие игрушки</span>
+                    <img id="categories_Img4" src="./img/категория_мягкие_игрушки.png" alt="">
+                </a>
+            <!--</div>-->
+        </div>
+
+        <span id="span_photo_of_the_store">В нашем магазине вы найдёте</span>
+        <div class="animationInfografic">
+           <!-- <img id="shop1" src="./img/магазин1.png" alt="">
+            <img id="shop2" src="./img/магазин2.png" alt="">
+            <img id="boy" src="./img/мальчик.png" alt="">
+            <img id="shop3" src="./img/магазин3.png" alt="">-->
+            <img src="./гиф/ezgif.com-gif-to-mp4-converter.gif" alt="">
+        </div>
 
     </main>
     
     <footer>
-        <div class="footerContainer">
+        <div class="footerContainer"><!--Подвао (нижний блок сайта)-->
             <div class="footerD">
-                <a href="../каталог/catalog.html">Каталог</a>
+                <a href="./каталог/catalog.html">Каталог</a>
                 <a href="">О доставке</a>
-                <a href="../личный_кабинет/profile.html">Личный кабинет</a>
-                <a href="../авторизация/login.html">Войти</a>
-                <a href="../index.html">
-                    <img id="footerLogo" src="../img/logo.png" alt="Логотип">
+                <a href="./личный_кабинет/profile.html">Личный кабинет</a> 
+                <a href="./авторизация/login.html">Войти</a>
+                <a href="./index.html">
+                    <img id="footerLogo" src="./img/logo.png" alt="Логотип">
                 </a>
             </div>
 
@@ -117,15 +167,15 @@
                     E-mail: 79232129444@yandex.ru<br>
                     Телефон: +7–923–212–94–44
                 </span>
-                <div class="socialNetwork">
-                   <img class="social" src="../img/почта.png" alt="">
-                    <img class="social" src="../img/вк.png" alt="">
-                    <img class="social" src="../img/однокласники.png" alt=""> 
+                <div class="socialNetwork"><!--Социальные сети-->
+                   <img class="social" src="./img/почта.png" alt="">
+                    <img class="social" src="./img/вк.png" alt="">
+                    <img class="social" src="./img/однокласники.png" alt=""> 
                 </div>
                     
             </div>
 
-            <div class="footerD" id="map">
+            <div class="footerD" id="map"><!--Карта-->
                 Где найти
                 <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/gospodin_rebenok/8724833193/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Господин ребенок</a><a href="https://yandex.ru/maps/1095/abakan/category/toys_and_games/184107250/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Детские игрушки и игры в Абакане</a><a href="https://yandex.ru/maps/1095/abakan/category/board_games/184107267/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Настольные и интеллектуальные игры в Абакане</a><iframe src="https://yandex.ru/map-widget/v1/org/gospodin_rebenok/8724833193/?ll=91.439914%2C53.732815&z=15" width="560" height="400" frameborder="1" style="position:relative;"></iframe></div>
             </div>
@@ -136,6 +186,6 @@
 
    <!-- <div class="close">+</div>-->
     
-   <script src="script_login.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>
