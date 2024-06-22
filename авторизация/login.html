@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style_login.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации</title>
+</head>
+<body id="bodyTop">
+    <header>
+        <a id="animationLogo" href="../index.html">
+            <img id="logo" src="../img/logo.png" alt="Логотип">
+        </a>
+        
+        <div class="search_box">
+           <input id="inputLook" type="search" placeholder="Поиск"> 
+            <button id="look"> 
+                <svg width="28" height="28" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.591 9.591a4 4 0 10-5.657-5.657 4 4 0 005.657 5.657zm1.06-6.717a5.502 5.502 0 01.915 6.57l2.732 2.733a1.5 1.5 0 11-2.121 2.12l-2.732-2.73a5.5 5.5 0 111.207-8.692z" fill="#fff"></path>
+                </svg>
+            </button> 
+        </div>
+        
+        <div id="circle">
+            <div class="favourites">
+                <img class="butFavouritesAndBasket" src="../img/избранное.png" alt="">
+            </div>
+            <div class="basket">
+                <img class="butFavouritesAndBasket" src="../img/корзина.png" alt="">
+            </div>
+        </div>
+
+        <div class="menu">
+            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+            <label for="burger-checkbox" class="burger"></label>
+            <ul class="menu-list">
+                <li class="item"><a href="#" class="menu-item">О доставке</a><li>
+                <li class="item"><a href="../личный_кабинет/profile.html">Личный кабинет</a></li> 
+                <li class="item"><a href="../авторизация/login.html">Войти</a></li>
+                <li class="item"><a href="../каталог/catalog.html" class="menu-item">Каталог</a><li>
+            </ul>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="menuCatalog">
+            <li>
+                <div class="navMenu">
+                    <a class="catalog" href="../каталог/catalog.html">Каталог</a>
+                    <div class="navMenu-content">
+                      <a href="#">Творчество</a>
+                      <a href="#">Настольные игры</a>
+                      <a href="#">Мягкие игрушки</a>
+                      <a href="#">Игрушки для  малышей до 3 лет</a>
+                      <a href="#">Развивающие игрушки</a>
+                      <a href="#">Куклы и аксессуары</a>
+                      <a href="#">Научные  эксперементы</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">О доставке</a></li>
+            <li><a href="../личный_кабинет/profile.html">Личный кабинет</a></li> 
+            <li><a href="../авторизация/login.html">Войти</a></li>
+        </ul>
+
+    </nav>
+    <main>
+        <a href="#bodyTop">
+            <div class="btn-up btn-up_hide"></div>
+        </a>
+        
+        <div class="containerFormaLogin">
+            <div class="loginForma">
+                <h2>Авторизация</h2>
+               <!-- <div class="form" onsubmit="return validateForm()" autocomplete="v"  method="post">
+                  <form class="forma">-->
+                    <form class="forma" method="post" action="" onsubmit="return checkForm(this)">
+
+                    <input id="email" type="email" required name="email" placeholder="*E-mail">
+                    <span id="ddd"></span>
+                    <span id="spanEmail1">Введите E-mail</span>
+                    <span id="spanEmail2">Неверный формат E-mail.</span>
+                    <input id="pass" type="password" required name="password" placeholder="*Пароль">
+                    <span id="spanPassword1">Введите пароль</span>
+                    <span id="spanPassword2">Неверный формат пароля. В пароле должно быть минимум 8 символов, должны быть заглавные и прописные буквы, числа</span>
+
+                    <!--<a href="../личный_кабинет/profile.html"> class="sub" onclick="Submit()"-->
+                        <button class="sub" type="submit">Авторизоваться</button>
+                    <!--</a>
+                </div>--></form>  
+                
+                    
+                <span class="spanStar">Поля, отмеченные *, обязательны для заполнения</span>
+                <a class="aButtonLogin" href="../регистрация/registration.html">Зарегистрироваться</a>
+            </div>
+        </div>
+
+
+    </main>
+    
+    <footer>
+        <div class="footerContainer">
+            <div class="footerD">
+                <a href="../каталог/catalog.html">Каталог</a>
+                <a href="">О доставке</a>
+                <a href="../личный_кабинет/profile.html">Личный кабинет</a>
+                <a href="../авторизация/login.html">Войти</a>
+                <a href="../index.html">
+                    <img id="footerLogo" src="../img/logo.png" alt="Логотип">
+                </a>
+            </div>
+
+            <div class="footerD" id="footerSocial">
+                Контакты
+                <span>
+                    E-mail: 79232129444@yandex.ru<br>
+                    Телефон: +7–923–212–94–44
+                </span>
+                <div class="socialNetwork">
+                   <img class="social" src="../img/почта.png" alt="">
+                    <img class="social" src="../img/вк.png" alt="">
+                    <img class="social" src="../img/однокласники.png" alt=""> 
+                </div>
+                    
+            </div>
+
+            <div class="footerD" id="map">
+                Где найти
+                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/gospodin_rebenok/8724833193/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Господин ребенок</a><a href="https://yandex.ru/maps/1095/abakan/category/toys_and_games/184107250/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Детские игрушки и игры в Абакане</a><a href="https://yandex.ru/maps/1095/abakan/category/board_games/184107267/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Настольные и интеллектуальные игры в Абакане</a><iframe src="https://yandex.ru/map-widget/v1/org/gospodin_rebenok/8724833193/?ll=91.439914%2C53.732815&z=15" width="560" height="400" frameborder="1" style="position:relative;"></iframe></div>
+            </div>
+        </div> 
+        <div>©2024 “Господин ребенок” Мультибрендовый магазин игрушек.</div>
+
+    </footer>
+
+   <!-- <div class="close">+</div>-->
+    
+   <script src="script_login.js"></script>
+</body>
+</html>
